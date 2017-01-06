@@ -19,8 +19,7 @@ var truncateWords = function(longText, numWords){
 	lenRemove = origLen - numWords;
 	newArray = longArray.splice(0, lenRemove); // to remove text from the end
 	//newArray = longArray.splice(numWords, lenRemove);  to remove text from the start
-	newArray.unshift("(");
-	newArray.push(")");
+	newArray.push("...");
 	newText = newArray.join(" ");
 	return newText;
 }
