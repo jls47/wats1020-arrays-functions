@@ -20,7 +20,7 @@ var truncateWords = function(longText, numWords){
 	newArray = longArray.splice(numWords, lenRemove);
 	newArray.unshift("(");
 	newArray.push(")");
-	newText = newArray.join();
+	newText = newArray.join(" ");
 	return newText;
 }
 // This portion of the script is meant to call and display the result of your Function.
