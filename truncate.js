@@ -65,5 +65,4 @@ var charShort = truncateCharacters(originalText, wordLimit);
 console.log('originalText: ' + originalText);
 console.log('charShort: ' + charShort);
 var charObj = truncateObj(originalText, wordLimit);
-console.log('originalText: ' + originalText);
-console.dir('charObj: ' + charObj);
+console.dir(charObj);
