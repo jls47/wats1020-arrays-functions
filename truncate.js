@@ -47,7 +47,7 @@ var truncateObj = function(longText, numWords){
 	//newArray = longArray.splice(numWords, lenRemove);  to remove text from the start
 	newArray.push("...");
 	var newText = newArray.join(" ");
-	var newObj = new Object(){
+	var newObj = {
 		"originalText": longText,
 		"wordCount": origLen,
 		"numWords": numWords,
