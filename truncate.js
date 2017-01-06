@@ -1,4 +1,4 @@
-
+ //
 // This is the file where you will write the Truncate Words function and related code.
 
 // TODO: Create a Function called truncateWords() that accepts two arguments: 
@@ -17,7 +17,8 @@ var truncateWords = function(longText, numWords){
 	longArray = longText.split(" ");
 	origLen = longArray.length;
 	lenRemove = origLen - numWords;
-	newArray = longArray.splice(0, lenRemove);
+	newArray = longArray.splice(0, lenRemove); // to remove text from the end
+	//newArray = longArray.splice(numWords, lenRemove);  to remove text from the start
 	newArray.unshift("(");
 	newArray.push(")");
 	newText = newArray.join(" ");
