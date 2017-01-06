@@ -25,6 +25,14 @@ var truncateWords = function(longText, numWords){
 	var newText = newArray.join(" ");
 	return newText;
 };
+
+var truncateCharacters = function(longText, numWords){
+	var textLen = longText.length - numWords;
+	var newString = longText.slice(0, textLen);
+	newString += "...";
+	return newString;
+};
+	    
 // This portion of the script is meant to call and display the result of your Function.
 // You do not need to change the following lines, but you may change them if you 
 // are experimenting further or pursuing stretch goals.
@@ -33,3 +41,6 @@ var wordLimit = 8;
 var shortText = truncateWords(originalText, wordLimit);
 console.log('originalText: ' + originalText);
 console.log('shortText: ' + shortText);
+var charShort = truncateCharacters(originalText, wordLimit);
+console.log('originalText: ' + originalText);
+console.log('charShort: ' + charShort);
