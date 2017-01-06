@@ -13,14 +13,16 @@
 // 5. Add an additional String item to the Array to put an ellipses in: "..."
 // 6. Use the join() function to convert the Array back into a String
 // 7. Return the truncated String from the Function
+
+use strict
 var truncateWords = function(longText, numWords){
-	longArray = longText.split(" ");
-	origLen = longArray.length;
-	lenRemove = origLen - numWords;
-	newArray = longArray.splice(0, lenRemove); // to remove text from the end
+	var longArray = longText.split(" ");
+	var origLen = longArray.length;
+	var lenRemove = origLen - numWords;
+	var newArray = longArray.splice(0, lenRemove); // to remove text from the end
 	//newArray = longArray.splice(numWords, lenRemove);  to remove text from the start
 	newArray.push("...");
-	newText = newArray.join(" ");
+	var newText = newArray.join(" ");
 	return newText;
 }
 // This portion of the script is meant to call and display the result of your Function.
