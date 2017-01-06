@@ -18,8 +18,8 @@ var truncateWords = function(longText, numWords){
 	origLen = longArray.length;
 	lenRemove = origLen - numWords;
 	newArray = longArray.splice(numWords, lenRemove);
-	newArray[0] = "(";
-	newArray[numWords + 1] = ")";
+	newArray.unshift("(");
+	newArray.push(")");
 	newText = newArray.join();
 	return newText;
 }
