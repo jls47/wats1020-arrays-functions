@@ -20,8 +20,7 @@ var truncateWords = function(longText, numWords){
 	var origLen = longArray.length;
 	if(!numWords){
 		numWords = origLen / 2;
-	};
-	var lenRemove = origLen - numWords;
+	};	var lenRemove = origLen - numWords;
 	var newArray = longArray.splice(0, lenRemove); // to remove text from the end
 	//newArray = longArray.splice(numWords, lenRemove);  to remove text from the start
 	newArray.push("...");
@@ -48,10 +47,10 @@ var truncateObj = function(longText, numWords){
 	newArray.push("...");
 	var newText = newArray.join(" ");
 	var newObj = {
-		"originalText": longText,
-		"wordCount": origLen,
-		"numWords": numWords,
-		"shortText": newText
+		originalText: longText,
+		wordCount: origLen,
+		numWords: numWords,
+		shortText: newText
 	};
 	return newObj;
 };
