@@ -1,4 +1,4 @@
- //
+; //
 // This is the file where you will write the Truncate Words function and related code.
 
 // TODO: Create a Function called truncateWords() that accepts two arguments: 
@@ -14,7 +14,7 @@
 // 6. Use the join() function to convert the Array back into a String
 // 7. Return the truncated String from the Function
 
-use strict
+use strict;
 var truncateWords = function(longText, numWords){
 	var longArray = longText.split(" ");
 	var origLen = longArray.length;
@@ -24,7 +24,7 @@ var truncateWords = function(longText, numWords){
 	newArray.push("...");
 	var newText = newArray.join(" ");
 	return newText;
-}
+};
 // This portion of the script is meant to call and display the result of your Function.
 // You do not need to change the following lines, but you may change them if you 
 // are experimenting further or pursuing stretch goals.
