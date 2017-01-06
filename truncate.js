@@ -14,7 +14,7 @@
 // 6. Use the join() function to convert the Array back into a String
 // 7. Return the truncated String from the Function
 
-use strict;
+"use strict";
 var truncateWords = function(longText, numWords);{
 	var longArray = longText.split(" ");
 	var origLen = longArray.length;
