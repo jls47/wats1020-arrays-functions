@@ -18,11 +18,9 @@
 var truncateWords = function(longText, numWords){
 	var longArray = longText.split(" ");
 	var origLen = longArray.length;
-	(function(){ 
-  		if(!numWords)
-    			numWords = origLen / 2;
-  		
-	})();
+	if(!numWords){
+		numWords = origLen / 2;
+	};
 	var lenRemove = origLen - numWords;
 	var newArray = longArray.splice(0, lenRemove); // to remove text from the end
 	//newArray = longArray.splice(numWords, lenRemove);  to remove text from the start
@@ -37,11 +35,6 @@ var truncateCharacters = function(longText, numWords){
 	newString += "...";
 	return newString;
 };
-
-var truncateWords = function(longText){
-	
-
-
 
 
 	    
