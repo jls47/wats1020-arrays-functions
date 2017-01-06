@@ -18,7 +18,7 @@
 var truncateWords = function(longText, numWords){
 	// First, we split the text into an array.
 	var longArray = longText.split(" ");
-/	// Next, we take the length of the array for future use.
+	// Next, we take the length of the array for future use.
 	var origLen = longArray.length;
 	// Stretch goal time!  Want to set up a default amount of words to remove if numwWords doesn't exist?  Try division!
 	if(!numWords){
