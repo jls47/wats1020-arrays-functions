@@ -15,7 +15,7 @@
 // 7. Return the truncated String from the Function
 
 "use strict";
-var truncateWords = function(longText, numWords);{
+var truncateWords = function(longText, numWords){
 	var longArray = longText.split(" ");
 	var origLen = longArray.length;
 	var lenRemove = origLen - numWords;
