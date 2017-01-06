@@ -36,7 +36,25 @@ var truncateCharacters = function(longText, numWords){
 	return newString;
 };
 
-
+var truncateObj = function(longText, numWords){
+	var longArray = longText.split(" ");
+	var origLen = longArray.length;
+	if(!numWords){
+		numWords = origLen / 2;
+	};
+	var lenRemove = origLen - numWords;
+	var newArray = longArray.splice(0, lenRemove); // to remove text from the end
+	//newArray = longArray.splice(numWords, lenRemove);  to remove text from the start
+	newArray.push("...");
+	var newText = newArray.join(" ");
+	var newObj = new Object(){
+		"originalText": longText,
+		"wordCount": origLen,
+		"numWords": numWords,
+		"shortText": newText
+	};
+	return newObj;
+};
 	    
 // This portion of the script is meant to call and display the result of your Function.
 // You do not need to change the following lines, but you may change them if you 
@@ -49,3 +67,6 @@ console.log('shortText: ' + shortText);
 var charShort = truncateCharacters(originalText, wordLimit);
 console.log('originalText: ' + originalText);
 console.log('charShort: ' + charShort);
+var charObj = truncateObj(originalText, wordLimit);
+console.log('originalText: ' + originalText);
+console.log('charObj: ' + charObj);
